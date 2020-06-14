@@ -11,7 +11,7 @@ pipeline {
                 print "DEBUG: parameter payload = ${payload}"
                 echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"                
                 sh 'git tag'
-                sh 'git clone -b v0.0.1 https://github.com/stugit/dummy_project.git .'
+                sh 'git clone -b v0.0.1 https://github.com/stugit/dummy_project.git'
                 sh 'env'
             }
         }
