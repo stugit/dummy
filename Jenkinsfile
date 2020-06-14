@@ -17,6 +17,7 @@ pipeline {
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
                 sh 'date'
+                print "DEBUG: parameter payload = ${payload}"
             }
         }
         stage('Build Artifacts') {
