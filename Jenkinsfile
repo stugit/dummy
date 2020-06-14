@@ -37,7 +37,16 @@ pipeline {
                 sh 'date'
                 print "DEBUG: parameter payload = ${payload}"                 
             }
-        }             
+        }          
+        stage('Housekeeping') {
+            steps {
+                /* `make check` returns non-zero on test failures,
+                * using `true` to allow the Pipeline to continue nonetheless
+                */
+                sh 'date'
+                print "DEBUG: parameter payload = ${payload}"                 
+            }
+        }              
     }
 }
 
