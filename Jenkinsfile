@@ -18,6 +18,7 @@ pipeline {
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
                 print "DEBUG: parameter payload = ${payload}"
+                echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"                
             }
         }
         stage('Build Artifacts') {
@@ -46,4 +47,6 @@ pipeline {
         }              
     }
 }
+
+
 
