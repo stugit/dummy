@@ -9,7 +9,7 @@ pipeline {
                 */
                 sh 'date'
                 print "DEBUG: parameter payload = ${payload}"
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
         stage('Integration Testing') {
