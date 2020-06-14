@@ -10,6 +10,7 @@ pipeline {
                 sh 'date'
                 print "DEBUG: parameter payload = ${payload}"
                 echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                git tag
             }
         }
         stage('Integration Testing') {
