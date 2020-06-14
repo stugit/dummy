@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: stugit/dummy
+        repository: stugit/dummy_project
         fetch-depth: 0
   
 
