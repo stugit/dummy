@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  semver-action:
+    runs-on: ubuntu-latest
+    name: semver-action
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        repository: stugit/dummy
+        fetch-depth: 0
+  
+
+    - uses: stugit/semver-action@master
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: "true"
