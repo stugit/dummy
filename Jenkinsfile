@@ -40,6 +40,8 @@ pipeline {
                 print "DEBUG: parameter payload = ${payload}"                 
             }
         }          
+        
+        
         stage('Housekeeping') {
             steps {
                 /* `make check` returns non-zero on test failures,
